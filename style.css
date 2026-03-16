@@ -1,15 +1,22 @@
 /* STAGE 0: GLOBAL STYLES & VARIABLES */
 :root {
-    --bg-dark: #0a0a0c;
-    --bg-card: #141417;
+    --bg-dark: #050507;
+    /* Еще глубже для контраста с неоном */
+    --bg-card: #0d0d12;
     --accent-cyan: #00f2ff;
     --accent-purple: #7000ff;
-    --text-main: #e0e0e0;
-    --text-muted: #a0a0a5;
+    --text-main: #f0f0f5;
+    --text-muted: #8e8e9a;
     --white: #ffffff;
-    --hologram-gradient: linear-gradient(135deg, rgba(0, 242, 255, 0.7) 0%, rgba(112, 0, 255, 0.7) 100%);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    /* Ультра-неоновый градиент */
+    --hologram-gradient: linear-gradient(135deg, rgba(0, 242, 255, 0.8) 0%, rgba(112, 0, 255, 0.8) 100%);
+    --glass-border: rgba(0, 242, 255, 0.2);
+    --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Свечение для элементов */
+    --glow-cyan: 0 0 20px rgba(0, 242, 255, 0.4);
+    --glow-purple: 0 0 25px rgba(112, 0, 255, 0.4);
 }
 
 * {
@@ -2014,4 +2021,51 @@ a {
         text-align: center;
         padding: 25px 20px;
     }
+}
+.strategy__card {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.strategy__card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--hologram-gradient);
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+
+.strategy__card:hover::after {
+    transform: translateX(0);
+}
+
+.strategy__card:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-5px);
+}
+
+.sphere-core {
+    background: var(--hologram-gradient);
+    box-shadow: var(--glow-purple);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.knowledge-node {
+    background: rgba(20, 20, 23, 0.8);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.knowledge-node:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
 }
