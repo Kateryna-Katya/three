@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $domainTitle ?> — Карьерный апгрейд и инновации</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2L28 9v14l-12 7L4 23V9l12-7z' fill='none' stroke='%2300F2FF' stroke-width='2'/%3E%3Cpath d='M10 20l5-5 3 3 6-8' stroke='%237000FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 10h5v5' stroke='%2300F2FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="./#home" class="logo">
+                <div class="logo__icon"></div>
+                <span class="logo__text"><?= $domainTitle ?></span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="./#home" class="nav__link">Главная</a></li>
+                    <li><a href="./#strategy" class="nav__link">Стратегия</a></li>
+                    <li><a href="./#experience" class="nav__link">Методология</a></li>
+                    <li><a href="./#cases" class="nav__link">Кейсы</a></li>
+                    <li><a href="./#expert" class="nav__link">Экспертиза</a></li>
+                </ul>
+            </nav>
+
+            <a href="./#contact" class="btn btn--primary header__cta">
+                <span>Связаться</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <button class="burger" aria-label="Menu">
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero__hologram"></div>
+            
+            <div class="container hero__container">
+                <div class="hero__content" data-aos="fade-right">
+                    <div class="badge">Технология нового поколения</div>
+                    <h1 class="hero__title">
+                        Постройте карьеру, которая <span class="text-gradient">работает на вас</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Переосмыслите подход к развитию с помощью экспертной поддержки и стратегий, которые меняют правила игры. Платформа года для вашего апгрейда.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                        <a href="#strategy" class="btn btn--outline">Узнать детали</a>
+                    </div>
+                </div>
+        
+                <div class="hero__visual" id="hero-parallax">
+                    <div class="visual__layer layer-1" data-depth="0.1">
+                        <svg class="chart-svg" viewBox="0 0 400 300">
+                            <path class="chart-line" d="M10,280 L100,220 L180,250 L300,100 L390,50" fill="none" stroke="url(#grad-cyan)" stroke-width="4" />
+                            <defs>
+                                <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:var(--accent-cyan);stop-opacity:0" />
+                                    <stop offset="100%" style="stop-color:var(--accent-cyan);stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    
+                    <div class="visual__layer layer-2" data-depth="0.3">
+                        <div class="floating-node node-1">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>Growth +85%</span>
+                        </div>
+                        <div class="floating-node node-2">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Senior Level</span>
+                        </div>
+                    </div>
+        
+                    <div class="visual__layer layer-3" data-depth="0.5">
+                        <div class="arrow-element arrow-1"></div>
+                        <div class="arrow-element arrow-2"></div>
+                        <div class="particle p-1"></div>
+                        <div class="particle p-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="strategy" id="strategy">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="badge">Методология</div>
+                    <h2 class="section-title">Стратегия, которая <span class="text-gradient">меняет правила</span></h2>
+                    <p class="section-subtitle">Мы разработали пошаговый путь трансформации из специалиста в лидера индустрии.</p>
+                </div>
+        
+                <div class="strategy__grid">
+                    <div class="strategy__card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="strategy__number">01</div>
+                        <div class="strategy__icon">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <h3 class="strategy__name">Аудит потенциала</h3>
+                        <p class="strategy__text">Глубокий анализ ваших навыков и скрытых талантов с использованием AI-инструментов оценки.</p>
+                        <div class="strategy__line"></div>
+                    </div>
+        
+                    <div class="strategy__card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="strategy__number">02</div>
+                        <div class="strategy__icon">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <h3 class="strategy__name">Вектор позиционирования</h3>
+                        <p class="strategy__text">Создание уникального личного бренда, который выделяет вас на глобальном рынке труда.</p>
+                        <div class="strategy__line"></div>
+                    </div>
+        
+                    <div class="strategy__card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="strategy__number">03</div>
+                        <div class="strategy__icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="strategy__name">Акселерация роста</h3>
+                        <p class="strategy__text">Интенсивная прокачка soft и hard skills под руководством менторов из топовых компаний.</p>
+                        <div class="strategy__line"></div>
+                    </div>
+        
+                    <div class="strategy__card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="strategy__number">04</div>
+                        <div class="strategy__icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="strategy__name">Выход на новый уровень</h3>
+                        <p class="strategy__text">Получение офферов мечты и закрепление на позиции лидера в вашей нише.</p>
+                        <div class="strategy__line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="experience" id="experience">
+            <div class="container experience__container">
+                <div class="experience__info" data-aos="fade-right">
+                    <div class="badge">Экспертиза</div>
+                    <h2 class="section-title">Ваша персональная <br><span class="text-gradient">Сфера знаний</span></h2>
+                    <p class="section-subtitle">
+                        Мы не просто учим — мы выстраиваем вокруг вас экосистему навыков, которые делают вас незаменимым игроком на глобальном рынке.
+                    </p>
+                    <ul class="experience__list">
+                        <li><i class="fa-solid fa-circle-check"></i> Интеграция AI в рабочие процессы</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Психология лидерства и Soft Skills</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Управление международными проектами</li>
+                    </ul>
+                </div>
+        
+                <div class="experience__visual">
+                    <div class="sphere-wrapper" id="knowledge-sphere">
+                        <div class="sphere-core">
+                            <div class="core-glow"></div>
+                            <span class="core-text">YOU</span>
+                        </div>
+        
+                        <div class="knowledge-node kn-1" data-speed="1.2">
+                            <div class="kn-icon"><i class="fa-solid fa-brain"></i></div>
+                            <div class="kn-label">AI Tools</div>
+                        </div>
+                        <div class="knowledge-node kn-2" data-speed="0.8">
+                            <div class="kn-icon"><i class="fa-solid fa-comments"></i></div>
+                            <div class="kn-label">Soft Skills</div>
+                        </div>
+                        <div class="knowledge-node kn-3" data-speed="1.5">
+                            <div class="kn-icon"><i class="fa-solid fa-globe"></i></div>
+                            <div class="kn-label">Networking</div>
+                        </div>
+                        <div class="knowledge-node kn-4" data-speed="1">
+                            <div class="kn-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                            <div class="kn-label">Strategy</div>
+                        </div>
+        
+                        <svg class="sphere-orbits" viewBox="0 0 400 400">
+                            <circle cx="200" cy="200" r="120" class="orbit-line" />
+                            <circle cx="200" cy="200" r="180" class="orbit-line" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cases" id="cases">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="badge">Результаты</div>
+                    <h2 class="section-title">Кейсы: <span class="text-gradient">Реальные апгрейды</span></h2>
+                    <p class="section-subtitle">Посмотрите, как трансформировались карьеры наших клиентов после внедрения наших стратегий.</p>
+                </div>
+        
+                <div class="swiper cases-slider" data-aos="zoom-in">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide">
+                            <div class="case-card">
+                                <div class="case-card__header">
+                                    <img src="/img/one.jpg" alt="User" class="case-card__img">
+                                    <div>
+                                        <h3 class="case-card__name">Александр П.</h3>
+                                        <p class="case-card__pos">Senior Frontend Dev</p>
+                                    </div>
+                                </div>
+                                <div class="case-card__body">
+                                    <div class="case-metric">
+                                        <span class="case-metric__val">+65%</span>
+                                        <span class="case-metric__label">к зарплате</span>
+                                    </div>
+                                    <p class="case-card__text">
+                                        «Перешли от хаотичного поиска к четкому позиционированию в Tier-1 компаниях Лондона. Получил оффер за 3 недели.»
+                                    </p>
+                                </div>
+                                <div class="case-card__footer">
+                                    <span class="tag">Relocation</span>
+                                    <span class="tag">Fintech</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide">
+                            <div class="case-card">
+                                <div class="case-card__header">
+                                    <img src="/img/two.jpg" alt="User" class="case-card__img">
+                                    <div>
+                                        <h3 class="case-card__name">Мария К.</h3>
+                                        <p class="case-card__pos">Product Manager</p>
+                                    </div>
+                                </div>
+                                <div class="case-card__body">
+                                    <div class="case-metric">
+                                        <span class="case-metric__val">x2</span>
+                                        <span class="case-metric__label">рост ответственности</span>
+                                    </div>
+                                    <p class="case-card__text">
+                                        «Внедрение AI-инструментов в управление продуктом позволило сократить Time-to-Market и занять позицию Head of Product.»
+                                    </p>
+                                </div>
+                                <div class="case-card__footer">
+                                    <span class="tag">AI Integration</span>
+                                    <span class="tag">Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide">
+                            <div class="case-card">
+                                <div class="case-card__header">
+                                    <img src="/img/three.jpg" alt="User" class="case-card__img">
+                                    <div>
+                                        <h3 class="case-card__name">Дмитрий Л.</h3>
+                                        <p class="case-card__pos">Tech Lead</p>
+                                    </div>
+                                </div>
+                                <div class="case-card__body">
+                                    <div class="case-metric">
+                                        <span class="case-metric__val">8 недель</span>
+                                        <span class="case-metric__label">путь до CTO</span>
+                                    </div>
+                                    <p class="case-card__text">
+                                        «Мы полностью пересобрали стратегию нетворкинга. Выход на C-level уровень оказался проще, чем я думал.»
+                                    </p>
+                                </div>
+                                <div class="case-card__footer">
+                                    <span class="tag">C-Level</span>
+                                    <span class="tag">Networking</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+        <section class="expert" id="expert">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="badge">Методология 2.0</div>
+                    <h2 class="section-title">Гибридный <span class="text-gradient">Интеллект</span></h2>
+                    <p class="section-subtitle">Мы объединили мощь алгоритмов и опыт живых экспертов для вашего кратного роста.</p>
+                </div>
+        
+                <div class="expert__comparison">
+                    <div class="expert__side expert__side--ai" data-aos="fade-right">
+                        <div class="expert__side-content">
+                            <div class="expert__side-icon">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <h3 class="expert__side-title">AI-Ассистент</h3>
+                            <ul class="expert__side-list">
+                                <li><i class="fa-solid fa-bolt"></i> Анализ 10,000+ вакансий в секунду</li>
+                                <li><i class="fa-solid fa-bolt"></i> Оптимизация резюме под ATS-фильтры</li>
+                                <li><i class="fa-solid fa-bolt"></i> Прогнозирование трендов рынка</li>
+                            </ul>
+                        </div>
+                        <div class="expert__side-bg">AI</div>
+                    </div>
+        
+                    <div class="expert__vs">VS</div>
+        
+                    <div class="expert__side expert__side--human" data-aos="fade-left">
+                        <div class="expert__side-content">
+                            <div class="expert__side-icon">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <h3 class="expert__side-title">Живой Ментор</h3>
+                            <ul class="expert__side-list">
+                                <li><i class="fa-solid fa-heart"></i> Развитие эмоционального интеллекта</li>
+                                <li><i class="fa-solid fa-heart"></i> Психологическая подготовка к интервью</li>
+                                <li><i class="fa-solid fa-heart"></i> Доступ к закрытому нетворкингу</li>
+                            </ul>
+                        </div>
+                        <div class="expert__side-bg">HUMAN</div>
+                    </div>
+                </div>
+        
+                <div class="expert__summary" data-aos="zoom-in">
+                    <p>Результат: <strong>Программа пассивного дохода</strong> и стратегия роста, которая работает даже когда вы отдыхаете.</p>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="container contact__container">
+                <div class="contact__info" data-aos="fade-up">
+                    <div class="badge">Связь с экспертом</div>
+                    <h2 class="section-title">Готовы к <br><span class="text-gradient">Апгрейду?</span></h2>
+                    <p class="section-subtitle">Оставьте заявку на бесплатную консультацию. Наш AI проанализирует ваш запрос, а ментор свяжется для уточнения деталей.</p>
+                    
+                    <div class="contact__meta">
+                        <div class="meta-item">
+                            <span class="meta-item__label">Среднее время ответа</span>
+                            <span class="meta-item__value">15 минут</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-item__label">Активных сессий</span>
+                            <span class="meta-item__value">12 сейчас</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="contact__form-wrapper" data-aos="zoom-in-left">
+                    <form action="#" class="contact__form" id="career-form">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-input" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-input" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-input" id="phone-input" placeholder="Телефон (только цифры)" required>
+                        </div>
+                        
+                        <div class="form-group captcha-group">
+                            <label class="captcha-label">Решите пример: <span id="captcha-task">...</span></label>
+                            <input type="text" id="captcha-input" class="form-input" placeholder="Ответ" required>
+                        </div>
+        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Я согласен с <a href="./personal-data-policy.php">политикой обработки данных</a></span>
+                            </label>
+                        </div>
+        
+                        <button type="submit" class="btn btn--primary form-submit">
+                            <span>Запросить доступ</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+        
+                        <div class="form-message" id="form-success">
+                            <div class="message-content">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <h4>Заявка принята!</h4>
+                                <p>Мы свяжемся с вами в течение 15 минут.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <a href="./#home" class="logo footer__logo">
+                    <div class="logo__icon"></div>
+                    <span class="logo__text"><?= $domainTitle ?></span>
+                </a>
+                <p class="footer__description">
+                    Инновационная технология вашего профессионального роста. Решения, которые меняют правила игры в индустрии карьеры.
+                </p>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Навигация</h4>
+                <ul class="footer__links">
+                    <li><a href="./#home">Главная</a></li>
+                    <li><a href="./#strategy">Стратегия</a></li>
+                    <li><a href="./#experience">Методология</a></li>
+                    <li><a href="./#cases">Кейсы</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Документы</h4>
+                <ul class="footer__links">
+                    <li><a href="./privacy.php">Privacy Policy</a></li>
+                    <li><a href="./cookies.php">Cookie Policy</a></li>
+                    <li><a href="./terms.php">Terms of Service</a></li>
+                    <li><a href="./return.php">Return Policy</a></li>
+                    <li><a href="./disclaimer.php">Disclaimer</a></li>
+                    <li><a href="./contact.php">Contact Us</a></li>
+                    <li><a href="./personal-data-policy.php">Data Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Контакты</h4>
+                <ul class="footer__contact-info">
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+442040971365">+44 20 4097 1365</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:hello@<?= $fullDomain ?>">hello@<?= $fullDomain ?></a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>40 Bank St, London E14 5NR, United Kingdom</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>&copy; <?= date('Y') ?> <?= $domainTitle ?>. Все права защищены. Предложение активно в странах ЕС.</p>
+        </div>
+    </footer>
+    <div class="menu-overlay" id="menu-overlay">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav__list">
+                <li><a href="./#home" class="mobile-nav__link">Главная</a></li>
+                <li><a href="./#strategy" class="mobile-nav__link">Стратегия</a></li>
+                <li><a href="./#experience" class="mobile-nav__link">Методология</a></li>
+                <li><a href="./#cases" class="mobile-nav__link">Кейсы</a></li>
+                <li><a href="./#expert" class="mobile-nav__link">Экспертиза</a></li>
+                <li><a href="./#contact" class="btn btn--primary">Связаться</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="cookie-popup" id="cookie-popup">
+        <div class="cookie-popup__content">
+            <i class="fa-solid fa-cookie-bite"></i>
+            <p class="cookie-popup__text">
+                Этот сайт использует cookies для улучшения работы. Подробнее — в нашей 
+                <a href="./cookies.php">Cookie политике</a>.
+            </p>
+            <button class="btn btn--primary btn--sm" id="cookie-accept">Принять</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
